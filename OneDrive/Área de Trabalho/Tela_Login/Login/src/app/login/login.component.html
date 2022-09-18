@@ -1,0 +1,26 @@
+<div class="container-login">
+  <img class="logo-devaria" src="/assets/imgs/Logo.svg" alt="Logo">
+
+  <form [formGroup]="form" (submit)="submit()">
+      <p class="erro" *ngIf="msgErro">{{ msgErro }}</p>
+
+      <div class="input-container">
+        <img class="img-login" src="/assets/imgs/Envelope.svg" alt="icone-email">
+        <input type="email" class="app-input input-email" placeholder="E-mail" formControlName="login">
+      </div>
+
+      <div class="input-container">
+        <img src="/assets/imgs/Key.svg" alt="icone-email">
+        <input type="password" class="app-input" placeholder="Senha" formControlName="senha">
+      </div>
+
+      <button
+        type="submit"
+        class="btn-submit"
+        [disabled]="form.invalid ||carregando "
+
+      >
+      Entrar
+    </button>
+  </form>
+</div>

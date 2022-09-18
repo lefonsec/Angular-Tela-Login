@@ -1,0 +1,90 @@
+@import '../../styles/variavei.scss';
+
+.container-login{
+  height: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .img-login{
+    margin-top: -15px;
+  }
+  .logo-devaria{
+    margin-bottom: 10%;
+  }
+  .btn-submit{
+    width: 100%;
+    height: 50px;
+    background-color: $primaryColor;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    margin-top: 30px;
+    &:disabled{
+      opacity: 0.8;
+    }
+  }
+  .erro{
+    text-align: center;
+    color: $erroColor;
+    font-size: 14px;
+  }
+  .input-container{
+    display: flex;
+    img{
+      margin-right: 10px;
+    }
+
+    .app-input{
+      font-size: 16px;
+      color: $primaryColor;
+      border-width: 0;
+      border-bottom: 1px solid $greyColor;
+      outline: none;
+      &:focus{
+        border-bottom-color: $primaryColor ;
+      }
+      &.input-email{
+        margin-bottom: 18px;
+      }
+      &::placeholder{
+        color: $greyColor;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder{
+        color: $greyColor;
+      }
+    }
+
+  }
+  @media screen and (min-width:$breakpointDeskTop) {
+    display: flex;
+    flex-direction: row;
+
+    .logo-devaria{
+      width: 30%;
+      margin: 0;
+    }
+    form{
+      border: 1px solid $primaryColor;
+      padding: 80px 40px;
+      border-radius: 32px;
+      margin-left: 15%;
+
+      .input-container{
+        .app-input{
+          width: 350px;
+
+        }
+
+
+      }
+      .btn-submit{
+        margin-top: 50px;
+      }
+    }
+  }
+}
